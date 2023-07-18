@@ -10,6 +10,9 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: Messenger_screen());
+    return const MaterialApp(
+      home: Messenger_screen(),
+      debugShowCheckedModeBanner: false,
+    );
   }
 }
