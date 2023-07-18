@@ -1,3 +1,5 @@
-# messenger_chat_page
+# Messenger chat page
 
-A new Flutter project.
+A messenger chat look-alike page.
+
+Note: Make sure the phone you are using is connected to WiFi.
