@@ -1,8 +1,12 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class MessengerScreen extends StatelessWidget {
-  const MessengerScreen({super.key});
-
+  MessengerScreen({super.key});
+  // ignore: non_constant_identifier_names
+  var search_controler = "";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,7 +17,6 @@ class MessengerScreen extends StatelessWidget {
         centerTitle: true,
         leading: Container(
           padding: const EdgeInsets.all(10),
-          height: 5,
           child: const CircleAvatar(
             radius: 15,
             backgroundImage: NetworkImage(
@@ -42,9 +45,824 @@ class MessengerScreen extends StatelessWidget {
               ))
         ],
       ),
-      body: const SingleChildScrollView(
-        child: Column(
-          children: [],
+      body: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                height: 40,
+                child: TextFormField(
+                    decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30)),
+                  filled: true,
+                  fillColor: Colors.grey[200],
+                  contentPadding: const EdgeInsets.all(4),
+                  hintText: "Search",
+                  prefixIcon: const Icon(
+                    Icons.search,
+                    size: 20,
+                  ),
+                )),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(children: [
+                    SizedBox(
+                      width: 53,
+                      child: Column(
+                        children: [
+                          Stack(
+                            alignment: AlignmentDirectional.bottomEnd,
+                            children: [
+                              CircleAvatar(
+                                radius: 23,
+                                backgroundImage: NetworkImage(
+                                    "https://i.pinimg.com/originals/fd/14/a4/fd14a484f8e558209f0c2a94bc36b855.png"),
+                              ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.only(
+                                    bottom: 3, end: 3),
+                                child: CircleAvatar(
+                                  radius: 7,
+                                  backgroundColor: Colors.green,
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 6,
+                          ),
+                          Text(
+                            "Mostafa Ahmed",
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(fontSize: 10),
+                            textAlign: TextAlign.center,
+                          )
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 15,
+                    ),
+                    SizedBox(
+                      width: 53,
+                      child: Column(
+                        children: [
+                          Stack(
+                            alignment: AlignmentDirectional.bottomEnd,
+                            children: [
+                              CircleAvatar(
+                                radius: 23,
+                                backgroundImage: NetworkImage(
+                                    "https://i.pinimg.com/originals/fd/14/a4/fd14a484f8e558209f0c2a94bc36b855.png"),
+                              ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.only(
+                                    bottom: 3, end: 3),
+                                child: CircleAvatar(
+                                  radius: 7,
+                                  backgroundColor: Colors.green,
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 6,
+                          ),
+                          Text(
+                            "Mostafa Ahmed",
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(fontSize: 10),
+                            textAlign: TextAlign.center,
+                          )
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    SizedBox(
+                      width: 53,
+                      child: Column(
+                        children: [
+                          Stack(
+                            alignment: AlignmentDirectional.bottomEnd,
+                            children: [
+                              CircleAvatar(
+                                radius: 23,
+                                backgroundImage: NetworkImage(
+                                    "https://i.pinimg.com/originals/fd/14/a4/fd14a484f8e558209f0c2a94bc36b855.png"),
+                              ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.only(
+                                    bottom: 3, end: 3),
+                                child: CircleAvatar(
+                                  radius: 7,
+                                  backgroundColor: Colors.green,
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 6,
+                          ),
+                          Text(
+                            "Mostafa Ahmed",
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(fontSize: 10),
+                            textAlign: TextAlign.center,
+                          )
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    SizedBox(
+                      width: 53,
+                      child: Column(
+                        children: [
+                          Stack(
+                            alignment: AlignmentDirectional.bottomEnd,
+                            children: [
+                              CircleAvatar(
+                                radius: 23,
+                                backgroundImage: NetworkImage(
+                                    "https://i.pinimg.com/originals/fd/14/a4/fd14a484f8e558209f0c2a94bc36b855.png"),
+                              ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.only(
+                                    bottom: 3, end: 3),
+                                child: CircleAvatar(
+                                  radius: 7,
+                                  backgroundColor: Colors.green,
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 6,
+                          ),
+                          Text(
+                            "Mostafa Ahmed",
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(fontSize: 10),
+                            textAlign: TextAlign.center,
+                          )
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    SizedBox(
+                      width: 53,
+                      child: Column(
+                        children: [
+                          Stack(
+                            alignment: AlignmentDirectional.bottomEnd,
+                            children: [
+                              CircleAvatar(
+                                radius: 23,
+                                backgroundImage: NetworkImage(
+                                    "https://i.pinimg.com/originals/fd/14/a4/fd14a484f8e558209f0c2a94bc36b855.png"),
+                              ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.only(
+                                    bottom: 3, end: 3),
+                                child: CircleAvatar(
+                                  radius: 7,
+                                  backgroundColor: Colors.green,
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 6,
+                          ),
+                          Text(
+                            "Mostafa Ahmed",
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(fontSize: 10),
+                            textAlign: TextAlign.center,
+                          )
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    SizedBox(
+                      width: 53,
+                      child: Column(
+                        children: [
+                          Stack(
+                            alignment: AlignmentDirectional.bottomEnd,
+                            children: [
+                              CircleAvatar(
+                                radius: 23,
+                                backgroundImage: NetworkImage(
+                                    "https://i.pinimg.com/originals/fd/14/a4/fd14a484f8e558209f0c2a94bc36b855.png"),
+                              ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.only(
+                                    bottom: 3, end: 3),
+                                child: CircleAvatar(
+                                  radius: 7,
+                                  backgroundColor: Colors.green,
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 6,
+                          ),
+                          Text(
+                            "Mostafa Ahmed",
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(fontSize: 10),
+                            textAlign: TextAlign.center,
+                          )
+                        ],
+                      ),
+                    )
+                  ])),
+              const SizedBox(
+                height: 20,
+              ),
+              Row(
+                children: [
+                  const Stack(
+                    alignment: AlignmentDirectional.bottomEnd,
+                    children: [
+                      CircleAvatar(
+                        radius: 23,
+                        backgroundImage: NetworkImage(
+                            "https://i.pinimg.com/originals/fd/14/a4/fd14a484f8e558209f0c2a94bc36b855.png"),
+                      ),
+                      Padding(
+                        padding: EdgeInsetsDirectional.only(bottom: 3, end: 3),
+                        child: CircleAvatar(
+                          radius: 7,
+                          backgroundColor: Colors.green,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const SizedBox(
+                        height: 7,
+                      ),
+                      const Text(
+                        "Mostafa Ahmed",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 16),
+                        textAlign: TextAlign.start,
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "Hello, good day to you sir.",
+                            style: TextStyle(color: Colors.grey[600]),
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            "Wed 3:15pm",
+                            style: TextStyle(color: Colors.grey[600]),
+                          )
+                        ],
+                      )
+                    ],
+                  )
+                ],
+              ),
+              const SizedBox(height: 15),
+              Row(
+                children: [
+                  const Stack(
+                    alignment: AlignmentDirectional.bottomEnd,
+                    children: [
+                      CircleAvatar(
+                        radius: 23,
+                        backgroundImage: NetworkImage(
+                            "https://i.pinimg.com/originals/fd/14/a4/fd14a484f8e558209f0c2a94bc36b855.png"),
+                      ),
+                      Padding(
+                        padding: EdgeInsetsDirectional.only(bottom: 3, end: 3),
+                        child: CircleAvatar(
+                          radius: 7,
+                          backgroundColor: Colors.green,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const SizedBox(
+                        height: 7,
+                      ),
+                      const Text(
+                        "Mostafa Ahmed",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 16),
+                        textAlign: TextAlign.start,
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "Hello, good day to you sir.",
+                            style: TextStyle(color: Colors.grey[600]),
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            "Wed 3:15pm",
+                            style: TextStyle(color: Colors.grey[600]),
+                          )
+                        ],
+                      )
+                    ],
+                  )
+                ],
+              ),
+              const SizedBox(height: 15),
+              Row(
+                children: [
+                  const Stack(
+                    alignment: AlignmentDirectional.bottomEnd,
+                    children: [
+                      CircleAvatar(
+                        radius: 23,
+                        backgroundImage: NetworkImage(
+                            "https://i.pinimg.com/originals/fd/14/a4/fd14a484f8e558209f0c2a94bc36b855.png"),
+                      ),
+                      Padding(
+                        padding: EdgeInsetsDirectional.only(bottom: 3, end: 3),
+                        child: CircleAvatar(
+                          radius: 7,
+                          backgroundColor: Colors.green,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const SizedBox(
+                        height: 7,
+                      ),
+                      const Text(
+                        "Mostafa Ahmed",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 16),
+                        textAlign: TextAlign.start,
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "Hello, good day to you sir.",
+                            style: TextStyle(color: Colors.grey[600]),
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            "Wed 3:15pm",
+                            style: TextStyle(color: Colors.grey[600]),
+                          )
+                        ],
+                      )
+                    ],
+                  )
+                ],
+              ),
+              const SizedBox(height: 15),
+              Row(
+                children: [
+                  const Stack(
+                    alignment: AlignmentDirectional.bottomEnd,
+                    children: [
+                      CircleAvatar(
+                        radius: 23,
+                        backgroundImage: NetworkImage(
+                            "https://i.pinimg.com/originals/fd/14/a4/fd14a484f8e558209f0c2a94bc36b855.png"),
+                      ),
+                      Padding(
+                        padding: EdgeInsetsDirectional.only(bottom: 3, end: 3),
+                        child: CircleAvatar(
+                          radius: 7,
+                          backgroundColor: Colors.green,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const SizedBox(
+                        height: 7,
+                      ),
+                      const Text(
+                        "Mostafa Ahmed",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 16),
+                        textAlign: TextAlign.start,
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "Hello, good day to you sir.",
+                            style: TextStyle(color: Colors.grey[600]),
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            "Wed 3:15pm",
+                            style: TextStyle(color: Colors.grey[600]),
+                          )
+                        ],
+                      )
+                    ],
+                  )
+                ],
+              ),
+              const SizedBox(height: 15),
+              Row(
+                children: [
+                  const Stack(
+                    alignment: AlignmentDirectional.bottomEnd,
+                    children: [
+                      CircleAvatar(
+                        radius: 23,
+                        backgroundImage: NetworkImage(
+                            "https://i.pinimg.com/originals/fd/14/a4/fd14a484f8e558209f0c2a94bc36b855.png"),
+                      ),
+                      Padding(
+                        padding: EdgeInsetsDirectional.only(bottom: 3, end: 3),
+                        child: CircleAvatar(
+                          radius: 7,
+                          backgroundColor: Colors.green,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const SizedBox(
+                        height: 7,
+                      ),
+                      const Text(
+                        "Mostafa Ahmed",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 16),
+                        textAlign: TextAlign.start,
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "Hello, good day to you sir.",
+                            style: TextStyle(color: Colors.grey[600]),
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            "Wed 3:15pm",
+                            style: TextStyle(color: Colors.grey[600]),
+                          )
+                        ],
+                      )
+                    ],
+                  )
+                ],
+              ),
+              const SizedBox(height: 15),
+              Row(
+                children: [
+                  const Stack(
+                    alignment: AlignmentDirectional.bottomEnd,
+                    children: [
+                      CircleAvatar(
+                        radius: 23,
+                        backgroundImage: NetworkImage(
+                            "https://i.pinimg.com/originals/fd/14/a4/fd14a484f8e558209f0c2a94bc36b855.png"),
+                      ),
+                      Padding(
+                        padding: EdgeInsetsDirectional.only(bottom: 3, end: 3),
+                        child: CircleAvatar(
+                          radius: 7,
+                          backgroundColor: Colors.green,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const SizedBox(
+                        height: 7,
+                      ),
+                      const Text(
+                        "Mostafa Ahmed",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 16),
+                        textAlign: TextAlign.start,
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "Hello, good day to you sir.",
+                            style: TextStyle(color: Colors.grey[600]),
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            "Wed 3:15pm",
+                            style: TextStyle(color: Colors.grey[600]),
+                          )
+                        ],
+                      )
+                    ],
+                  )
+                ],
+              ),
+              const SizedBox(height: 15),
+              Row(
+                children: [
+                  const Stack(
+                    alignment: AlignmentDirectional.bottomEnd,
+                    children: [
+                      CircleAvatar(
+                        radius: 23,
+                        backgroundImage: NetworkImage(
+                            "https://i.pinimg.com/originals/fd/14/a4/fd14a484f8e558209f0c2a94bc36b855.png"),
+                      ),
+                      Padding(
+                        padding: EdgeInsetsDirectional.only(bottom: 3, end: 3),
+                        child: CircleAvatar(
+                          radius: 7,
+                          backgroundColor: Colors.green,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const SizedBox(
+                        height: 7,
+                      ),
+                      const Text(
+                        "Mostafa Ahmed",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 16),
+                        textAlign: TextAlign.start,
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "Hello, good day to you sir.",
+                            style: TextStyle(color: Colors.grey[600]),
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            "Wed 3:15pm",
+                            style: TextStyle(color: Colors.grey[600]),
+                          )
+                        ],
+                      )
+                    ],
+                  )
+                ],
+              ),
+              const SizedBox(height: 15),
+              Row(
+                children: [
+                  const Stack(
+                    alignment: AlignmentDirectional.bottomEnd,
+                    children: [
+                      CircleAvatar(
+                        radius: 23,
+                        backgroundImage: NetworkImage(
+                            "https://i.pinimg.com/originals/fd/14/a4/fd14a484f8e558209f0c2a94bc36b855.png"),
+                      ),
+                      Padding(
+                        padding: EdgeInsetsDirectional.only(bottom: 3, end: 3),
+                        child: CircleAvatar(
+                          radius: 7,
+                          backgroundColor: Colors.green,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const SizedBox(
+                        height: 7,
+                      ),
+                      const Text(
+                        "Mostafa Ahmed",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 16),
+                        textAlign: TextAlign.start,
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "Hello, good day to you sir.",
+                            style: TextStyle(color: Colors.grey[600]),
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            "Wed 3:15pm",
+                            style: TextStyle(color: Colors.grey[600]),
+                          )
+                        ],
+                      )
+                    ],
+                  )
+                ],
+              ),
+              const SizedBox(height: 15),
+              Row(
+                children: [
+                  const Stack(
+                    alignment: AlignmentDirectional.bottomEnd,
+                    children: [
+                      CircleAvatar(
+                        radius: 23,
+                        backgroundImage: NetworkImage(
+                            "https://i.pinimg.com/originals/fd/14/a4/fd14a484f8e558209f0c2a94bc36b855.png"),
+                      ),
+                      Padding(
+                        padding: EdgeInsetsDirectional.only(bottom: 3, end: 3),
+                        child: CircleAvatar(
+                          radius: 7,
+                          backgroundColor: Colors.green,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const SizedBox(
+                        height: 7,
+                      ),
+                      const Text(
+                        "Mostafa Ahmed",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 16),
+                        textAlign: TextAlign.start,
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "Hello, good day to you sir.",
+                            style: TextStyle(color: Colors.grey[600]),
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            "Wed 3:15pm",
+                            style: TextStyle(color: Colors.grey[600]),
+                          )
+                        ],
+                      )
+                    ],
+                  )
+                ],
+              ),
+              const SizedBox(height: 15),
+              Row(
+                children: [
+                  const Stack(
+                    alignment: AlignmentDirectional.bottomEnd,
+                    children: [
+                      CircleAvatar(
+                        radius: 23,
+                        backgroundImage: NetworkImage(
+                            "https://i.pinimg.com/originals/fd/14/a4/fd14a484f8e558209f0c2a94bc36b855.png"),
+                      ),
+                      Padding(
+                        padding: EdgeInsetsDirectional.only(bottom: 3, end: 3),
+                        child: CircleAvatar(
+                          radius: 7,
+                          backgroundColor: Colors.green,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const SizedBox(
+                        height: 7,
+                      ),
+                      const Text(
+                        "Mostafa Ahmed",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 16),
+                        textAlign: TextAlign.start,
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "Hello, good day to you sir.",
+                            style: TextStyle(color: Colors.grey[600]),
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            "Wed 3:15pm",
+                            style: TextStyle(color: Colors.grey[600]),
+                          )
+                        ],
+                      )
+                    ],
+                  )
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
