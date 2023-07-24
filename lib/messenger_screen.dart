@@ -44,46 +44,50 @@ class MessengerScreen extends StatelessWidget {
               ))
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(
-              height: 40,
-              child: TextFormField(
-                  decoration: InputDecoration(
-                border:
-                    OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
-                filled: true,
-                fillColor: Colors.grey[200],
-                contentPadding: const EdgeInsets.all(4),
-                hintText: "Search",
-                prefixIcon: const Icon(
-                  Icons.search,
-                  size: 20,
-                ),
-              )),
-            ),
-            const SizedBox(height: 10),
-            SizedBox(
-              height: 90,
-              child: ListView.separated(
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (context, index) => buildStoryItem(),
-                separatorBuilder: (context, index) => const SizedBox(width: 15),
-                itemCount: 10,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                height: 40,
+                child: TextFormField(
+                    decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30)),
+                  filled: true,
+                  fillColor: Colors.grey[200],
+                  contentPadding: const EdgeInsets.all(4),
+                  hintText: "Search",
+                  prefixIcon: const Icon(
+                    Icons.search,
+                    size: 20,
+                  ),
+                )),
               ),
-            ),
-            Expanded(
-              child: ListView.separated(
+              const SizedBox(height: 10),
+              SizedBox(
+                height: 90,
+                child: ListView.separated(
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) => buildStoryItem(),
+                  separatorBuilder: (context, index) =>
+                      const SizedBox(width: 15),
+                  itemCount: 10,
+                ),
+              ),
+              const SizedBox(height: 10),
+              ListView.separated(
+                  physics: const NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
                   scrollDirection: Axis.vertical,
                   itemBuilder: (context, index) => buildChatItem(),
                   separatorBuilder: (context, index) =>
                       const SizedBox(height: 15),
-                  itemCount: 10),
-            )
-          ],
+                  itemCount: 10)
+            ],
+          ),
         ),
       ),
     );
